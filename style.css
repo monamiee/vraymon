@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --main-font: 'Montserrat', sans-serif;
+    --main-font-color: #707070;
+    --secondary-font-color: #ffffff;
+    --font-hover-color-1: #b9b9b9;
+    --font-hover-color-2: #dfdfdf;
+}
+
+html
+{
+    font-family: var(--main-font);
+    font-size: 10px;
+    color: var(--main-font-color);
+    scroll-behavior: smooth;
+}
+
+section
+{
+    padding: 3.9rem 0;   
+    overflow: hidden;
+}
+
+img
+{
+    width: 100%;
+    max-width: 100%;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+p
+{
+    font-size: 1.6rem;
+}
+
+.container
+{
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/*Header Style*/
+header
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navigation
+{
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-toggle
+{
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+
+.fa-times
+{
+    display: none;
+}
+
+.fa-bars
+{
+    color: var(--main-font-color);
+    font-size: 3rem;
+}
+
+.nav-list
+{
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--main-font-color);
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(200%);
+    transition: transform 0.8s;
+}
+
+.navigation::before
+{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.open .fa-bars
+{
+    display: none;
+}
+
+.open .fa-times
+{
+    display: block;
+}
+
+.open .nav-list
+{
+    transform: translateX(0);
+}
+
+.open .navigation::before
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-item
+{
+    border-bottom: 2px solid rgba(255,255,255, 0.5);
+}
+
+.nav-link
+{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    margin-left: -2px;
+    transition: color 0.5s;
+}
+
+.nav-link:hover
+{
+    color: var(--font-hover-color-1);
+}
+
+/* Home */
+
+.home
+{
+    width: 100%;
+    height: 100vh;
+    background: url("BG Location Link") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.home-logo
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.sub-headline
+{
+    font-size: 8.5rem;
+    font-family: var(--main-font);
+    color: var(--secondary-font-color);
+    font-weight: 100;
+    line-height: .8;
+    letter-spacing: 2px;
+}
+
+.single-animation h5
+{
+    opacity: 0;
+    animation: fadedown 1.2s forwards;
+    animation-delay: 1.5s;
+}
+
+.single-animation a
+{
+    opacity: 0;
+    animation: fadedown 1.2s forwards;
+    animation-delay: 2.5s;
+}
+
+.headline
+{
+    color: var(--main-font-color);
+    font-size: 3.5rem;
+    font-family: var(--main-font);
+    font-weight: 100;
+    letter-spacing: .3rem;
+    margin-right: .5rem;
+    opacity: 0;
+    animation: fadeUp 1.2s forwards;
+    animation-delay: .7s;
+    margin-bottom: 2rem;
+}
+
+.headline-name
+{
+    color: var(--main-font-color);
+    font-size: 1.5rem;
+    font-family: var(--main-font);
+    font-weight: 100;
+    letter-spacing: .3rem;
+    margin-left: .5rem;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeUp 1.2s forwards;
+    animation-delay: .5s;
+}
+
+.headline-description h5
+{
+    color: var(--main-font-color);
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-bottom: 1.2rem;
+    margin-right: -3px;
+    margin-top: 5px;
+}
+
+.btn
+{
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+.cta-btn
+{
+    font-size: 1.1rem;
+    color: var(--main-font-color);
+    position: relative;
+    transition: color .5s;
+}
+
+.cta-btn::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-font-color);
+    transition: background-color .5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus
+{
+    color: var(--font-hover-color-1);
+}
+
+.cta-btn:hover::before,
+.cta-btn:focus::before
+{
+    color: var(--main-font-color);
+}
+
+/* About Me */
+.my-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    justify-content: right;
+}
+
+.global-headline
+{
+    text-align: left;
+    margin-top: 3.9rem;
+}
+
+.aboutme-info
+{
+    text-align: left;
+}
+
+.description
+{
+    margin-top: 2rem;
+}
+
+.description p
+{
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    margin-top: 5px;
+}
+
+.body-btn
+{
+    font-size: 1.1rem;
+    color: var(--main-font-color);
+    position: relative;
+    transition: color .5s;
+}
+
+.body-btn::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-font-color);
+    transition: background-color .5s;
+}
+
+.body-btn:hover,
+.body-btn:focus
+{
+    color: var(--font-hover-color-1);
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before
+{
+    color: var(--main-font-color);
+}
+
+/* My Experiences */
+
+.exp-btn
+{
+    font-size: 1.1rem;
+    color: var(--main-font-color);
+    position: relative;
+    transition: color .5s;
+}
+
+.exp-btn::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-font-color);
+    transition: background-color .5s;
+}
+
+.exp-btn:hover,
+.exp-btn:focus
+{
+    color: var(--font-hover-color-1);
+}
+
+.exp-btn:hover::before,
+.exp-btn:focus::before
+{
+    color: var(--main-font-color);
+}
+
+.animate-bottom p
+{
+    line-height: 1.6;
+    margin-top: 5px;
+    margin-bottom: 1.2rem;
+}
+
+/* My Skills */
+
+.img-button
+{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    transition: transform .2s;
+}
+
+.img-button:hover
+{
+    transform: scale(1.5);
+}
+
+.image-group
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8rem;
+    margin-top: 1.2rem;
+    font-size: 5rem;
+}
+
+.web-display
+{
+    display: none;
+}
+
+.web-display-misc
+{
+    display: none;
+}
+
+.image-group p
+{
+    margin: auto;
+    align-content: center;
+}
+
+.my-skill-logo
+{
+    width: 65%;
+    margin: auto;
+}
+
+.skill-display-info
+{
+    display: none;
+}
+
+.img-desc
+{
+    color: var(--main-font-color);
+    font-size: 1.2rem;
+    font-weight: 50;
+    margin-bottom: 1.2rem;
+    margin-right: -3px;
+    margin-top: 5px;
+}
+
+.skl-btn
+{
+    font-size: 1.1rem;
+    color: var(--main-font-color);
+    position: relative;
+    transition: color .5s;
+    left: 21em;
+    margin-top: 5rem;
+}
+
+.skl-btn::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-font-color);
+    transition: background-color .5s;
+}
+
+.skl-btn:hover,
+.skl-btn:focus
+{
+    color: var(--font-hover-color-1);
+}
+
+.skl-btn:hover::before,
+.skl-btn:focus::before
+{
+    color: var(--main-font-color);
+}
+
+/* Work */
+
+
+/* Footer */
+footer
+{
+    padding: 7.9rem 0;
+    background-color: #707070;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.back-to-top
+{
+    width: 7rem;
+    height: 7rem;
+    background-color: #121212;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.back-to-top i
+{
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+    animation: arrowUp 1.5s infinite;
+}
+
+.footer-content
+{
+    overflow: hidden;
+}
+
+.footer-content h4
+{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+
+.footer-content.contact
+{
+    margin-bottom: 5.4rem;
+}
+
+.footer-content.contact p
+{
+    line-height: 2;
+}
+
+.social-icon
+{
+    list-style: none;
+    margin-bottom: 5.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon i
+{
+    font-size: 3rem;
+    color: #fff;
+    padding: .8rem 2rem;
+    opacity: .5;
+    transition: color .5s;
+}
+
+.social-icon i :hover,
+.social-icon i :focus
+{
+    opacity: 1;
+}
+
+.social-media h4
+{
+    margin-top: 3rem;
+}
+
+/* Media Query */
+
+@media screen and (min-width: 900px)
+{
+    .skl-btn
+    {
+        font-size: 2.1rem;
+        left: 23em;
+    }
+
+    section
+    {
+        padding: 7.9rem;
+    }
+
+    .menu-toggle
+    {
+        display: none;
+    }
+
+    .nav
+    {
+        justify-content: space-between;
+    }
+
+    .nav-list
+    {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+    }
+
+    .small-display
+    {
+        display: none;
+    }
+
+    .web-display
+    {
+        display: grid;
+        grid-template-columns: repeat(4, .4fr);
+        grid-gap: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+        font-size: 5rem;
+    }
+
+    .web-display-misc
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin: 10rem 10rem 10rem 3rem;
+        font-size: 5rem;
+    }
+
+    .my-skill-logo-web
+    {
+        margin: auto;
+        width: 25%;
+    }
+
+    .skill-display-info
+    {
+        overflow: hidden;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8rem;
+        margin-top: 8rem;
+        margin-bottom: 5rem;
+        font-size: 5rem;
+    }
+
+
+    .nav-link
+    {
+        color: var(--main-font-color);
+    }
+
+    .nav-item
+    {
+        margin: 0 2.4rem;
+        border: none;
+    }
+
+    .active
+    {
+        position: relative;
+    }
+
+    .active::before
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--main-font-color);
+        left: 0;
+        bottom: -3px;
+    }
+
+    .nav-item:last-child
+    {
+        margin-right: 0;
+    }
+
+    .footer-content
+    {
+        max-width: 77.5rem;
+        margin: auto;
+    }
+
+    .home-logo
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .my-image
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        justify-content: right;
+    }
+
+    .my-skill-logo
+    {
+        width: 25%;
+    }
+
+    .image-group
+    {
+        grid-gap: 2rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeUp
+{
+    0%
+    {
+        transform: translateY(4rem);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadedown
+{
+    0%
+    {
+        transform: translateY(-1rem);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrowUp
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+}

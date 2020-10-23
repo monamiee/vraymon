@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vraymon</title>
+        <!--Font awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <!--Scroll reveal CDN-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="navigation">
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#homepage" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#aboutmepage" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#workpage" class="nav-link">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contactpage" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--Header Ends-->
+
+        <section id="homepage" class="home">
+            <div class="container">
+                <img class="home-logo" src="Asset/MainLogo.png" alt="logoimg">
+                <h1 class="headline-name">Vinsensius Raymon</h1>
+                <div class="headline-description">
+                    <div class="single-animation">
+                        <h1 class="headline">Game Programmer</h1>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta. Cras viverra eget lacus ac gravida. Aenean tellus ante, varius sit amet leo et, efficitur consequat odio. Pellentesque sodales lacinia dignissim. Aliquam neque sapien, gravida quis ex non, egestas placerat nisl. Nunc auctor in dolor non lacinia. </h5>
+                        <a href="#aboutmepage" class="btn cta-btn">More About Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Home End-->
+
+        <section id="aboutmepage" class="aboutme">
+            <div class="container">
+                <div class="aboutme-info">
+                    <div class="aboutme-img animate-right">
+                        <img class="my-image" src="Asset/MyFace.png" alt="My Image">
+                    </div>
+                    <div class="global-headline animate-top">
+                        <h1 class="headline">About Me</h1>
+                    </div>
+                    <div class="description padding-right animate-left">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta. Cras viverra eget lacus ac gravida. Aenean tellus ante, varius sit amet leo et, efficitur consequat odio. Pellentesque sodales lacinia dignissim. Aliquam neque sapien, gravida quis ex non, egestas placerat nisl. Nunc auctor in dolor non lacinia.
+                        </p>
+                        <a href="#experiencepage" class="btn body-btn">My Experiences</a>
+                    </div>      
+                </div>
+            </div>
+        </section>
+        <!-- About Me End -->
+
+        <section id="experiencepage" class="my-experience">
+            <div class="container">
+                <div class="exp-img animate-right">
+                    <img class="my-image" src="Asset/ExpLogo.png" alt="My Image">
+                </div>
+                <div class="global-headline">
+                    <div class="animate-top">
+                        <h1 class="headline">My Experiences</h1>
+                    </div>
+                </div>
+                <div class="animate-bottom">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta. Cras viverra eget lacus ac gravida. Aenean tellus ante, varius sit amet leo et, efficitur consequat odio. Pellentesque sodales lacinia dignissim. Aliquam neque sapien, gravida quis ex non, egestas placerat nisl. Nunc auctor in dolor non lacinia.
+                    </p>
+                </div>
+                <a href="#skillpage" class="btn exp-btn animate-bottom">About My Skills</a>
+            </div>
+        </section>
+        <!-- My Experience End -->
+
+        <section id="skillpage" class="my-skill">
+            <div class="container">
+                <div class="global-headline">
+                    <div class="animate-top">
+                        <h1 class="headline">My Skills</h1>
+                    </div>
+                </div>
+                <div class="aboutme-info">
+                    <div class="image-group padding-right animate-left img-desc small-display">
+                        <img class="my-skill-logo" src="Asset/unitylogo.png" alt="My Image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+
+                        <img class="my-skill-logo" src="Asset/visualstudioLogo.png" alt="My Image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+
+                        <img class="my-skill-logo" src="Asset/OOP.png" alt="My Image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+
+                        <img class="my-skill-logo" src="Asset/SQLlogo.png" alt="My Image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                    </div>
+                    <div class="skill-display-info animate-top">
+                        <img id="displayed-skill" class="my-skill-logo" src="Asset/unitylogo.png" alt="My Image">
+                        <p id="displayed-skill-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                    </div>
+                    <div class="web-display animate-right">
+                        <button class="img-button" onclick=unity();>
+                            <img class="my-skill-logo-web" src="Asset/unitylogo.png" alt="My Image">
+                        </button>
+                        
+                        <button class="img-button" onclick=vsc();>
+                            <img class="my-skill-logo-web" src="Asset/visualstudioLogo.png" alt="My Image">
+                        </button>
+
+                        <button class="img-button" onclick=oop();>
+                            <img class="my-skill-logo-web" src="Asset/OOP.png" alt="My Image">
+                        </button>
+
+                        <button class="img-button"onclick=sql();>
+                            <img class="my-skill-logo-web" src="Asset/SQLlogo.png" alt="My Image">
+                        </button>
+                    </div>
+                </div>
+                <a href="#miscskillpage" class="btn skl-btn animate-bottom">Other Skills</a>
+            </div>
+        </section>
+        <!-- My Skills End -->
+
+        <section id="miscskillpage" class="my-skill">
+            <div class="container">
+                <div class="global-headline">
+                    <div class="animate-top">
+                        <h1 class="headline">Miscellaneous Skills</h1>
+                    </div>
+                </div>
+                <div class="aboutme-info">
+                    <div class="image-group padding-right animate-left img-desc small-display">
+                        <img class="my-skill-logo" src="Asset/premierePro.png" alt="My Image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+
+                        <img class="my-skill-logo" src="Asset/Photoshop.png" alt="My Image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                    </div>
+                    <div class="skill-display-info animate-top">
+                        <img id="displayed-skill-misc" class="my-skill-logo" src="Asset/premierePro.png" alt="My Image">
+                        <p id="displayed-skill-info-misc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                    </div>
+                    <div class="web-display-misc animate-right">
+                        <button class="img-button" onclick=Pr();>
+                            <img class="my-skill-logo-web" src="Asset/premierePro.png" alt="My Image">
+                        </button>
+                        
+                        <button class="img-button" onclick=Ps();>
+                            <img class="my-skill-logo-web" src="Asset/Photoshop.png" alt="My Image">
+                        </button>
+                    </div>
+                </div>
+                <a href="#workpage" class="btn skl-btn animate-left">My Work</a>
+            </div>
+        </section>
+        <!-- Other Skills End -->
+
+        <section id="workpage" class="my-work">
+            <div class="container">
+                <div class="global-headline">
+                    <div class="animate-top">
+                        <h1 class="headline">My Work</h1>
+                    </div>
+                </div>
+                <div class="aboutme-info">
+                    <div class="image-group padding-right img-desc">
+                        <img class="my-skill-logo animate-left" src="Asset/unitylogo.png" alt="My Image">
+                            <p class="animate-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+
+                        <p class="animate-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                            <img class="my-skill-logo animate-right" src="Asset/visualstudioLogo.png" alt="My Image">
+                        
+                        <img class="my-skill-logo animate-left" src="Asset/OOP.png" alt="My Image">
+                            <p class="animate-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+
+                        <p class="animate-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                            <img class="my-skill-logo animate-right" src="Asset/SQLlogo.png" alt="My Image">  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- My Work End -->
+        
+        <footer>
+            <div id="contactpage" class="container">
+                <div class="back-to-top">
+                    <a href="#"><i class="fas fa-chevron-up"></i></a>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-content-contact animate-top">
+                        <h4>Contact Me</h4>
+                        <p>
+                            Phone : +62 853-5131-7961
+                        </p>
+                    </div>
+                    <br>
+                    <div class="footer-content-divider animate-bottom">
+                        <div class="social-media">
+                            <h4>Social Media</h4>
+                            <ul class="social-icon">
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+         
+        <script src="main.js"></script>
+    </body>
+</html>
