@@ -10,30 +10,35 @@
 
         <meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="logo.png" type="image/png">
     </head>
-    <body>
+    <body onload="ToggleHomeOnLoad()">
         <header>
-            <div class="container">
-                <nav class="navigation">
-                    <div class="menu-toggle">
-                        <i class="fas fa-bars"></i>
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#homepage" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#aboutmepage" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#workpage" class="nav-link">Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contactpage" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a id="home" href="#homepage" onclick="selectedLink()" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="about" href="#aboutmepage" onclick="selectedLink()" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="work" href="#workpage" onclick="selectedLink()" class="nav-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contact" href="#contactpage" onclick="selectedLink()" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <img class="vlogo" src="Asset/logo.png" alt="vlogoimg">
+                <a class="vdesc">
+                    Vinsensius Raymon
+                    <br>
+                    Game Programmer
+                </a>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
             </div>
         </header>
         <!--Header Ends-->
@@ -45,7 +50,7 @@
                 <div class="headline-description">
                     <div class="single-animation">
                         <h1 class="headline">Game Programmer</h1>
-                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta. Cras viverra eget lacus ac gravida. Aenean tellus ante, varius sit amet leo et, efficitur consequat odio. Pellentesque sodales lacinia dignissim. Aliquam neque sapien, gravida quis ex non, egestas placerat nisl. Nunc auctor in dolor non lacinia. </h5>
+                        <h5>Hello, my name is Raymon, for the past 2 years, I have experience work in Game development. I have a big passion for Game Developing and love to learn new things. I am a very diligent and hardworking person. I also have experience as a programmer in software development for standalone projects. For more info about me, feel free to explore my portfolio.</h5>
                         <a href="#aboutmepage" class="btn cta-btn">More About Me</a>
                     </div>
                 </div>
@@ -56,17 +61,20 @@
         <section id="aboutmepage" class="aboutme">
             <div class="container">
                 <div class="aboutme-info">
-                    <div class="aboutme-img animate-right">
-                        <img class="my-image" src="Asset/MyFace.png" alt="My Image">
+                    <div class="aboutme-img animate-top">
+                        <img class="my-image" src="Asset/MyFace2.png" alt="My Image">
                     </div>
                     <div class="global-headline animate-top">
                         <h1 class="headline">About Me</h1>
                     </div>
-                    <div class="description padding-right animate-left">
+                    <div class="description padding-right animate-bottom">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta. Cras viverra eget lacus ac gravida. Aenean tellus ante, varius sit amet leo et, efficitur consequat odio. Pellentesque sodales lacinia dignissim. Aliquam neque sapien, gravida quis ex non, egestas placerat nisl. Nunc auctor in dolor non lacinia.
+                            My full name is Vinsensius Raymon Sucipto. I was born in Bandung on 21 November 1999. From then until now I live in Bandung. Currently, I'm a student of Informatic at Bina Nusantara University @Bandung. 
+                            <br>
+                            <br>
+                            I have a passion for the programming world, especially in Game Development. For me Create games is a challenging thing. I love to learn new things, and I am a diligent and hardworking person. If there is something new that I don't know or understand, I will study it until I understand it. I'm also a perfectionist person, if I'm doing a project, I will make sure everything I'm doing on that project is perfect before submitting it. I'm able to work in a team, and I have good communication skills.
                         </p>
-                        <a href="#experiencepage" class="btn body-btn">My Experiences</a>
+                        <a href="#experiencepage" class="btn cta-btn">My Experiences</a>
                     </div>      
                 </div>
             </div>
@@ -75,7 +83,7 @@
 
         <section id="experiencepage" class="my-experience">
             <div class="container">
-                <div class="exp-img animate-right">
+                <div class="exp-img animate-top">
                     <img class="my-image" src="Asset/ExpLogo.png" alt="My Image">
                 </div>
                 <div class="global-headline">
@@ -84,11 +92,70 @@
                     </div>
                 </div>
                 <div class="animate-bottom">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta. Cras viverra eget lacus ac gravida. Aenean tellus ante, varius sit amet leo et, efficitur consequat odio. Pellentesque sodales lacinia dignissim. Aliquam neque sapien, gravida quis ex non, egestas placerat nisl. Nunc auctor in dolor non lacinia.
-                    </p>
+                    <div class="aboutme-info">
+                        <div class="Big-Text">
+                            <a>Work</a>
+                        </div>
+                        <div class="image-group padding-right img-desc">
+                            <img class="my-exp-logo animate-left" src="Asset/menaralogo.png" alt="My Image">
+                                <p class="animate-right">
+                                    2018 - 2019
+                                    <br>
+                                    <br>
+                                    Internship at Menara Games as Quality Assurance Specialist.
+                                    (Testing games and report bugs and game performances.)
+                                </p>
+    
+                            <img class="my-exp-logo animate-left" src="Asset/menaralogo.png" alt="My Image">
+                                <p class="animate-right">
+                                    2019 - 2020
+                                    <br>
+                                    <br>
+                                    Internship at Menara Games as Technical Artist.
+                                    (Create Particle using Particle System for Games.)
+                                </p>
+
+                            <img class="my-exp-logo animate-left" src="Asset/menaralogo.png" alt="My Image">
+                                <p class="animate-right">
+                                    April 2020 - June 2020
+                                    <br>
+                                    <br>
+                                    Internship at Menara Games as Level Designer and Additional Programmer.
+                                    (Design Level at Demonrift TD games.)
+                                </p>
+                            
+                            <img class="my-exp-logo animate-left" src="Asset/binus.png" alt="My Image">
+                                <p class="animate-right">
+                                    2018 - 2020
+                                    <br>
+                                    <br>
+                                    Part-Time Sales and Promotion at Bina Nusantara University @Bandung.
+                                </p>
+                        </div>
+                        <div class="Big-Text animate-bottom">
+                            <a>Organization</a>
+                        </div>
+                        <div class="image-group padding-right img-desc">
+                            <img class="my-exp-logo animate-left" src="Asset/binus.png" alt="My Image">
+                                <p class="animate-right">
+                                    2018 - 2019
+                                    <br>
+                                    <br>
+                                    Learning and Training Game Making at Bina Nusantara Computer Club
+                                    (Teaching and Training basic knowledge about Game Developmet)
+                                </p>
+    
+                            <img class="my-exp-logo animate-left" src="Asset/binus.png" alt="My Image">
+                                <p class="animate-right">
+                                    2018 - 2019
+                                    <br>
+                                    <br>
+                                    Staff of the Events & Liturgy Division at KMK
+                                    (Creating events for KMK routine activities.)
+                                </p>
+                        </div>
+                    </div>
                 </div>
-                <a href="#skillpage" class="btn exp-btn animate-bottom">About My Skills</a>
             </div>
         </section>
         <!-- My Experience End -->
@@ -103,22 +170,30 @@
                 <div class="aboutme-info">
                     <div class="image-group padding-right animate-left img-desc small-display">
                         <img class="my-skill-logo" src="Asset/unitylogo.png" alt="My Image">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <p>
+                            I have been using this Unity Game Engine for about 2 years. Usually, I use Unity for my personal projects for training and learning. My knowledge about Unity Game Engine is quite a lot, but I still want to learn and deepen this Unity Game Engine.
+                        </p>
 
                         <img class="my-skill-logo" src="Asset/visualstudioLogo.png" alt="My Image">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <p>
+                            As a programmer, I certainly have to master several programming languages. Some of the programming languages ​​that I have learned and understood include C #, C ++, Java, Html, Css, Python, SQL. I have also used several of these programming languages ​​for projects that I am working on.
+                        </p>
 
                         <img class="my-skill-logo" src="Asset/OOP.png" alt="My Image">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <p>
+                            Object-Oriented Programming is one of the paradigms that I am good at the most. Because most of the projects I work on are Game Development, OOP is the most important and crucial one, so I'm good at the OOP concept.
+                        </p>
 
                         <img class="my-skill-logo" src="Asset/SQLlogo.png" alt="My Image">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <p>
+                            I used to use SQL to create small projects to organize data. I have also learned it during the Database course on campus, and I quite understand how to use and work this SQL, and I also quite understand the concepts of databases, DDL, and DML.
+                        </p>
                     </div>
                     <div class="skill-display-info animate-top">
                         <img id="displayed-skill" class="my-skill-logo" src="Asset/unitylogo.png" alt="My Image">
-                        <p id="displayed-skill-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <p id="displayed-skill-info">I have been using this Unity Game Engine for about 2 years. Usually, I use Unity for my personal projects for training and learning. My knowledge about Unity Game Engine is quite a lot, but I still want to learn and deepen this Unity Game Engine.</p>
                     </div>
-                    <div class="web-display animate-right">
+                    <div class="web-display animate-bottom">
                         <button class="img-button" onclick=unity();>
                             <img class="my-skill-logo-web" src="Asset/unitylogo.png" alt="My Image">
                         </button>
@@ -136,44 +211,9 @@
                         </button>
                     </div>
                 </div>
-                <a href="#miscskillpage" class="btn skl-btn animate-bottom">Other Skills</a>
             </div>
         </section>
         <!-- My Skills End -->
-
-        <section id="miscskillpage" class="my-skill">
-            <div class="container">
-                <div class="global-headline">
-                    <div class="animate-top">
-                        <h1 class="headline">Miscellaneous Skills</h1>
-                    </div>
-                </div>
-                <div class="aboutme-info">
-                    <div class="image-group padding-right animate-left img-desc small-display">
-                        <img class="my-skill-logo" src="Asset/premierePro.png" alt="My Image">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
-
-                        <img class="my-skill-logo" src="Asset/Photoshop.png" alt="My Image">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
-                    </div>
-                    <div class="skill-display-info animate-top">
-                        <img id="displayed-skill-misc" class="my-skill-logo" src="Asset/premierePro.png" alt="My Image">
-                        <p id="displayed-skill-info-misc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
-                    </div>
-                    <div class="web-display-misc animate-right">
-                        <button class="img-button" onclick=Pr();>
-                            <img class="my-skill-logo-web" src="Asset/premierePro.png" alt="My Image">
-                        </button>
-                        
-                        <button class="img-button" onclick=Ps();>
-                            <img class="my-skill-logo-web" src="Asset/Photoshop.png" alt="My Image">
-                        </button>
-                    </div>
-                </div>
-                <a href="#workpage" class="btn skl-btn animate-left">My Work</a>
-            </div>
-        </section>
-        <!-- Other Skills End -->
 
         <section id="workpage" class="my-work">
             <div class="container">
@@ -184,24 +224,38 @@
                 </div>
                 <div class="aboutme-info">
                     <div class="image-group padding-right img-desc">
-                        <img class="my-skill-logo animate-left" src="Asset/unitylogo.png" alt="My Image">
-                            <p class="animate-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <img class="my-work-logo animate-left" src="Asset/demonrift.png" alt="My Image">
+                            <p class="animate-right">
+                                Demonrift TD is one of the games released by Menara Games. In this game, I contribute as a Quality Assurance Specialist, Technical Artist, Level Design, and Additional Programmer. This game has been released and can be downloaded on the App Store and Play Store.
+                            </p>
 
-                        <p class="animate-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
-                            <img class="my-skill-logo animate-right" src="Asset/visualstudioLogo.png" alt="My Image">
+                        <img class="my-work-logo animate-left" src="Asset/Zoa.png" alt="My Image">
+                            <p class="animate-right">
+                                Zoa is one of my personal projects that I work on with my team to fulfill a client order. Zoa is an application for children, this application can be used to learn about animals. The feature that makes this application interesting is the AR (Augmented Reality) feature which can bring up real animal models when directed at a marker. This application is a package with its Interactivity Book.
+                            </p>
                         
-                        <img class="my-skill-logo animate-left" src="Asset/OOP.png" alt="My Image">
-                            <p class="animate-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
+                        <img class="my-work-logo animate-left" src="Asset/hit.png" alt="My Image">
+                            <p class="animate-right">
+                                Hit is one of the games I made with my group to fulfill the final project of the Game Engine Programming course. In this game I contributed to Mechanic Design, Implementation (Coding), and Level Design. Some of the assets of this game I took free models from the website, and some of the team I created using Blender 3D.
+                            </p>
 
-                        <p class="animate-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum ut neque in porta.</p>
-                            <img class="my-skill-logo animate-right" src="Asset/SQLlogo.png" alt="My Image">  
+                        <img class="my-work-logo animate-left" src="Asset/kangdeliperi.png" alt="My Image">
+                            <p class="animate-right">
+                                Kang Deliperi is a game I work on with my co-workers. This game was done in 1 month to compete in the 2020 Gemnastik event. But unfortunately, this game has not been able to attract the attention of the jury. In this game, I contributed to Environmental Design, Mechanic Game, Implementation (Coding), and Level Design. Meanwhile, my colleague contributes to UI / UX.
+                            </p>  
+                        
+                        <img class="my-work-logo animate-left" src="Asset/logo_small.png" alt="My Image">
+                        <p class="animate-right">
+                            The website you are exploring is the result of my work. I developed my portfolio website myself. I built everything from scratch without the help of the library (Boostrap, Laravel, etc). Css and Html on this website I developed myself from scratch. I made image assets on this website myself by taking a free and copyright-free icon or image and then edited it using Photoshop.
+                        </p>  
                     </div>
                 </div>
             </div>
         </section>
         <!-- My Work End -->
-        
-        <footer>
+
+        <div class="container wrapper"></div>
+        <footer id="contact">
             <div id="contactpage" class="container">
                 <div class="back-to-top">
                     <a href="#"><i class="fas fa-chevron-up"></i></a>
@@ -210,22 +264,25 @@
                     <div class="footer-content-contact animate-top">
                         <h4>Contact Me</h4>
                         <p>
-                            Phone : +62 853-5131-7961
+                            Email : vraymonss@gmail.com
                         </p>
                     </div>
                     <br>
                     <div class="footer-content-divider animate-bottom">
                         <div class="social-media">
-                            <h4>Social Media</h4>
+                            <h4>Connect with me</h4>
                             <ul class="social-icon">
                                 <li>
-                                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="https://www.facebook.com/vinsensius.raymon.9/"><i class="fab fa-facebook-square"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.linkedin.com/in/vinsensius-ray-0ab65a1ba/"><i class="fab fa-linkedin-in"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/vraymon/"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-github"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -233,7 +290,6 @@
                 </div>
             </div>
         </footer>
-         
         <script src="main.js"></script>
     </body>
 </html>

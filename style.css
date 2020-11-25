@@ -12,7 +12,7 @@
 :root
 {
     --main-font: 'Montserrat', sans-serif;
-    --main-font-color: #707070;
+    --main-font-color: #000000;
     --secondary-font-color: #ffffff;
     --font-hover-color-1: #b9b9b9;
     --font-hover-color-2: #dfdfdf;
@@ -28,7 +28,7 @@ html
 
 section
 {
-    padding: 3.9rem 0;   
+    padding: 3.5rem 0;   
     overflow: hidden;
 }
 
@@ -72,14 +72,17 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
 }
 
 .menu-toggle
 {
     color: #fff;
     font-size: 2.2rem;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 5%;
     transform: translateY(-50%);
     right: 2.5rem;
     cursor: pointer;
@@ -103,10 +106,10 @@ header
     list-style: none;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 45%;
     width: 60%;
     height: 100vh;
-    background-color: var(--main-font-color);
+    background-color: #707070;
     padding: 4.4rem;
     display: flex;
     flex-direction: column;
@@ -146,15 +149,23 @@ header
     transform: translateX(0);
 }
 
+.selected
+{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.Big-Text
+{
+    font-size: 3.5rem;
+    text-align: center;
+    padding-bottom: 4rem;
+    padding-top: 5rem;
+}
+
 .open .navigation::before
 {
     opacity: 1;
     transform: scale(1);
-}
-
-.nav-item
-{
-    border-bottom: 2px solid rgba(255,255,255, 0.5);
 }
 
 .nav-link
@@ -168,9 +179,24 @@ header
     transition: color 0.5s;
 }
 
-.nav-link:hover
+.nav-link:hover,
+.nav-link:focus
 {
     color: var(--font-hover-color-1);
+    border-bottom: 2px solid rgba(255,255,255, 0.5);
+}
+
+.vlogo
+{
+    display: block;
+    margin-right: 2%;
+    width: 8%;
+}
+
+.vdesc
+{
+    margin-right: 55%;
+    font-size: 1.3rem;
 }
 
 /* Home */
@@ -265,7 +291,7 @@ header
 
 .cta-btn
 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--main-font-color);
     position: relative;
     transition: color .5s;
@@ -330,7 +356,7 @@ header
 
 .body-btn
 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--main-font-color);
     position: relative;
     transition: color .5s;
@@ -364,7 +390,7 @@ header
 
 .exp-btn
 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--main-font-color);
     position: relative;
     transition: color .5s;
@@ -442,9 +468,15 @@ header
     align-content: center;
 }
 
+.image-group img
+{
+    margin: auto;
+    align-content: center;
+}
+
 .my-skill-logo
 {
-    width: 65%;
+    width: 40%;
     margin: auto;
 }
 
@@ -465,11 +497,11 @@ header
 
 .skl-btn
 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--main-font-color);
     position: relative;
     transition: color .5s;
-    left: 21em;
+    left: 50%;
     margin-top: 5rem;
 }
 
@@ -497,13 +529,19 @@ header
     color: var(--main-font-color);
 }
 
-/* Work */
-
 
 /* Footer */
+
+.wrapper
+{
+    height: 20rem;
+    padding: 12rem 0;
+}
+
 footer
 {
-    padding: 7.9rem 0;
+    height: 60rem;
+    padding:  7.9rem 0 0 0;
     background-color: #707070;
     color: #fff;
     text-align: center;
@@ -538,7 +576,7 @@ footer
 
 .footer-content h4
 {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 3px;
@@ -587,6 +625,31 @@ footer
 
 @media screen and (min-width: 900px)
 {
+    .selected
+    {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-link
+    {
+        font-size: 1.6rem;
+    }
+    
+    .skl-btn
+    {
+        left: 0%;
+    }
+
+    .wrapper
+    {
+        display: none;
+    }
+
+    footer
+    {
+        height: 35rem;
+    }
+
     .skl-btn
     {
         font-size: 2.1rem;
@@ -606,6 +669,16 @@ footer
     .nav
     {
         justify-content: space-between;
+    }
+
+    .vlogo
+    {
+        display: none;
+    }
+
+    .vdesc
+    {
+        display: none;
     }
 
     .nav-list
@@ -651,6 +724,16 @@ footer
         width: 25%;
     }
 
+    .my-work-logo
+    {
+        width: 55%;
+    }
+
+    .my-exp-logo
+    {
+        width: 50%;
+    }
+
     .skill-display-info
     {
         overflow: hidden;
@@ -663,6 +746,15 @@ footer
         font-size: 5rem;
     }
 
+    .skill-display-info p
+    {
+        text-align: justify;
+    }
+
+    .skill-display-info img
+    {
+        align-items: center;
+    }
 
     .nav-link
     {
@@ -728,9 +820,50 @@ footer
     {
         grid-gap: 2rem;
     }
+
+    /* Mouse icon anim */
+    .scroll-downs {
+        position: fixed;
+        top: 90rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        
+        width :24px;
+        height: 45px;
+    }
+    .mousey {
+        width: 3px;
+        padding: 10px 15px;
+        height: 35px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 25px;
+        opacity: 0.75;
+        box-sizing: content-box;
+    }
+    .scroller {
+        width: 3px;
+        height: 10px;
+        border-radius: 25%;
+        background-color: rgb(0, 0, 0);
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+        animation-iteration-count: infinite;
+    }
+  
 }
 
 /* Animation */
+
+@keyframes scroll 
+{
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
 @keyframes fadeUp
 {
     0%
